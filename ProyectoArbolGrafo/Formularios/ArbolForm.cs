@@ -16,5 +16,10 @@ namespace ProyectoArbolGrafo
         {
             InitializeComponent();
         }
+
+        private void tvArbol_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }
