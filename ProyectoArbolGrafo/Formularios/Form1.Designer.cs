@@ -28,13 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnARBOL = new System.Windows.Forms.Button();
+            this.btnGRAFO = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnARBOL
+            // 
+            this.btnARBOL.Location = new System.Drawing.Point(90, 130);
+            this.btnARBOL.Name = "btnARBOL";
+            this.btnARBOL.Size = new System.Drawing.Size(156, 139);
+            this.btnARBOL.TabIndex = 0;
+            this.btnARBOL.Text = "ÁRBOL";
+            this.btnARBOL.UseVisualStyleBackColor = true;
+            // 
+            // btnGRAFO
+            // 
+            this.btnGRAFO.Location = new System.Drawing.Point(308, 130);
+            this.btnGRAFO.Name = "btnGRAFO";
+            this.btnGRAFO.Size = new System.Drawing.Size(156, 139);
+            this.btnGRAFO.TabIndex = 1;
+            this.btnGRAFO.Text = "GRAFO";
+            this.btnGRAFO.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(597, 450);
+            this.Controls.Add(this.btnGRAFO);
+            this.Controls.Add(this.btnARBOL);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnARBOL;
+        private System.Windows.Forms.Button btnGRAFO;
     }
 }
 
