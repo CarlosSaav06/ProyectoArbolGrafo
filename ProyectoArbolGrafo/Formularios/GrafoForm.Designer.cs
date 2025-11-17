@@ -36,7 +36,7 @@
             this.lblDestino = new System.Windows.Forms.Label();
             this.tbDestino = new System.Windows.Forms.TextBox();
             this.lblPeso = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbPeso = new System.Windows.Forms.TextBox();
             this.btnAgregarArista = new System.Windows.Forms.Button();
             this.lblInicioBFS = new System.Windows.Forms.Label();
             this.tbInicio = new System.Windows.Forms.TextBox();
@@ -48,12 +48,12 @@
             this.btnDijkstra = new System.Windows.Forms.Button();
             this.gbNodos = new System.Windows.Forms.GroupBox();
             this.gbConexiones = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbRecorridosYRutas = new System.Windows.Forms.GroupBox();
             this.gbAdyacencias = new System.Windows.Forms.GroupBox();
             this.lbAdyacencias = new System.Windows.Forms.ListBox();
             this.gbNodos.SuspendLayout();
             this.gbConexiones.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbRecorridosYRutas.SuspendLayout();
             this.gbAdyacencias.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,12 +123,12 @@
             this.lblPeso.TabIndex = 7;
             this.lblPeso.Text = "Peso:";
             // 
-            // textBox1
+            // tbPeso
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 22);
-            this.textBox1.TabIndex = 8;
+            this.tbPeso.Location = new System.Drawing.Point(72, 92);
+            this.tbPeso.Name = "tbPeso";
+            this.tbPeso.Size = new System.Drawing.Size(126, 22);
+            this.tbPeso.TabIndex = 8;
             // 
             // btnAgregarArista
             // 
@@ -206,6 +206,7 @@
             this.btnDijkstra.TabIndex = 17;
             this.btnDijkstra.Text = "Dijkstra";
             this.btnDijkstra.UseVisualStyleBackColor = true;
+            this.btnDijkstra.Click += new System.EventHandler(this.btnDijkstra_Click_1);
             // 
             // gbNodos
             // 
@@ -226,7 +227,7 @@
             this.gbConexiones.Controls.Add(this.lblPeso);
             this.gbConexiones.Controls.Add(this.tbOrigen);
             this.gbConexiones.Controls.Add(this.tbDestino);
-            this.gbConexiones.Controls.Add(this.textBox1);
+            this.gbConexiones.Controls.Add(this.tbPeso);
             this.gbConexiones.Controls.Add(this.btnAgregarArista);
             this.gbConexiones.Location = new System.Drawing.Point(370, 26);
             this.gbConexiones.Name = "gbConexiones";
@@ -235,22 +236,22 @@
             this.gbConexiones.TabStop = false;
             this.gbConexiones.Text = "Agregar Conexiones";
             // 
-            // groupBox1
+            // gbRecorridosYRutas
             // 
-            this.groupBox1.Controls.Add(this.lblInicioBFS);
-            this.groupBox1.Controls.Add(this.lblDestinoDijkstra);
-            this.groupBox1.Controls.Add(this.tbInicio);
-            this.groupBox1.Controls.Add(this.btnDijkstra);
-            this.groupBox1.Controls.Add(this.tbFin);
-            this.groupBox1.Controls.Add(this.btnBFS);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lbRecorrido);
-            this.groupBox1.Location = new System.Drawing.Point(101, 238);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 298);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gbRecorridosYRutas.Controls.Add(this.lblInicioBFS);
+            this.gbRecorridosYRutas.Controls.Add(this.lblDestinoDijkstra);
+            this.gbRecorridosYRutas.Controls.Add(this.tbInicio);
+            this.gbRecorridosYRutas.Controls.Add(this.btnDijkstra);
+            this.gbRecorridosYRutas.Controls.Add(this.tbFin);
+            this.gbRecorridosYRutas.Controls.Add(this.btnBFS);
+            this.gbRecorridosYRutas.Controls.Add(this.label1);
+            this.gbRecorridosYRutas.Controls.Add(this.lbRecorrido);
+            this.gbRecorridosYRutas.Location = new System.Drawing.Point(101, 238);
+            this.gbRecorridosYRutas.Name = "gbRecorridosYRutas";
+            this.gbRecorridosYRutas.Size = new System.Drawing.Size(380, 298);
+            this.gbRecorridosYRutas.TabIndex = 20;
+            this.gbRecorridosYRutas.TabStop = false;
+            this.gbRecorridosYRutas.Text = "Recorridos y Rutas";
             // 
             // gbAdyacencias
             // 
@@ -277,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 943);
             this.Controls.Add(this.gbAdyacencias);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbRecorridosYRutas);
             this.Controls.Add(this.gbConexiones);
             this.Controls.Add(this.gbNodos);
             this.Name = "GrafoForm";
@@ -287,8 +288,8 @@
             this.gbNodos.PerformLayout();
             this.gbConexiones.ResumeLayout(false);
             this.gbConexiones.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbRecorridosYRutas.ResumeLayout(false);
+            this.gbRecorridosYRutas.PerformLayout();
             this.gbAdyacencias.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -304,7 +305,7 @@
         private System.Windows.Forms.Label lblDestino;
         private System.Windows.Forms.TextBox tbDestino;
         private System.Windows.Forms.Label lblPeso;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPeso;
         private System.Windows.Forms.Button btnAgregarArista;
         private System.Windows.Forms.Label lblInicioBFS;
         private System.Windows.Forms.TextBox tbInicio;
@@ -316,7 +317,7 @@
         private System.Windows.Forms.Button btnDijkstra;
         private System.Windows.Forms.GroupBox gbNodos;
         private System.Windows.Forms.GroupBox gbConexiones;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbRecorridosYRutas;
         private System.Windows.Forms.GroupBox gbAdyacencias;
         private System.Windows.Forms.ListBox lbAdyacencias;
     }

@@ -49,6 +49,7 @@
             this.btnGRAFO.TabIndex = 1;
             this.btnGRAFO.Text = "GRAFO";
             this.btnGRAFO.UseVisualStyleBackColor = true;
+            this.btnGRAFO.Click += new System.EventHandler(this.btnGRAFO_Click);
             // 
             // Form1
             // 
