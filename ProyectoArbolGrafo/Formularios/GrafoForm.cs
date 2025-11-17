@@ -249,7 +249,7 @@ namespace ProyectoArbolGrafo.Formularios
             string inicio = tbInicio.Text.Trim();
             string fin = tbFin.Text.Trim();
 
-            List<string> ruta = Dijkstra.CalcularRuta(miGrafo, tbInicio.Text.Trim(), tbFin.Text.Trimz);
+            List<string> ruta = Dijkstra.CalcularRuta(miGrafo, tbInicio.Text.Trim(), tbFin.Text.Trim());
 
             if (ruta.Count == 0)
                 lbRecorrido.Items.Add("No hay ruta disponible");
