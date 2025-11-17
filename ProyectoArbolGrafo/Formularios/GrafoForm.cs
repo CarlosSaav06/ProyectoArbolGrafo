@@ -16,5 +16,10 @@ namespace ProyectoArbolGrafo.Formularios
         {
             InitializeComponent();
         }
+
+        private void GrafoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
