@@ -82,6 +82,7 @@
             this.btnInsertar.TabIndex = 4;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // tbBuscar
             // 
@@ -98,6 +99,7 @@
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lbRecorrido
             // 
@@ -116,6 +118,7 @@
             this.btnRecorridoBFS.TabIndex = 8;
             this.btnRecorridoBFS.Text = "Recorrido BFS";
             this.btnRecorridoBFS.UseVisualStyleBackColor = true;
+            this.btnRecorridoBFS.Click += new System.EventHandler(this.btnRecorridoBFS_Click);
             // 
             // btnPreorden
             // 
@@ -125,6 +128,7 @@
             this.btnPreorden.TabIndex = 9;
             this.btnPreorden.Text = "Recorrido Preorden";
             this.btnPreorden.UseVisualStyleBackColor = true;
+            this.btnPreorden.Click += new System.EventHandler(this.btnPreorden_Click);
             // 
             // btnContar
             // 
@@ -134,6 +138,7 @@
             this.btnContar.TabIndex = 10;
             this.btnContar.Text = "Contar";
             this.btnContar.UseVisualStyleBackColor = true;
+            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
             // 
             // lblPadre
             // 
@@ -193,6 +198,7 @@
             this.Controls.Add(this.tvArbol);
             this.Name = "ArbolForm";
             this.Text = "ArbolForm";
+            this.Load += new System.EventHandler(this.ArbolForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
